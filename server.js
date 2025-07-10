@@ -39,3 +39,10 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
+
+// Configurar CORS
+app.use(cors({
+  origin: 'https://guard-iac.vercel.app', // o '*' para pruebas
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
