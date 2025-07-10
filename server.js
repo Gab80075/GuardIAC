@@ -4,6 +4,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
+const cors = require('cors');
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -41,8 +43,13 @@ app.listen(PORT, () => {
 });
 
 // Configurar CORS
+
 app.use(cors({
-  origin: 'https://guard-iac.vercel.app', // o '*' para pruebas
+  origin: 'https://guard-iac.vercel.app',
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Opcional pero recomendado: manejo explícito de OPTIONS
+app.options('*', cors());
+
