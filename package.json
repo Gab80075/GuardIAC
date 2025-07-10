@@ -1,0 +1,27 @@
+
+{
+  "name": "guardiac",
+  "version": "1.0.0",
+  "description": "GuardIAC: Generador de Políticas de Privacidad",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node esbuild.config.js",
+    "deploy": "npm run build && gcloud app deploy"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

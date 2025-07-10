@@ -1,0 +1,6 @@
+{
+  "name": "GuardIAC: Generador de Políticas de Privacidad (Colombia)",
+  "description": "Una aplicación para generar, personalizar y gestionar modelos de políticas de privacidad que cumplen con las regulaciones de protección de datos en Colombia, como la Ley 1581 de 2012. La aplicación simplifica la creación de políticas legalmente sólidas y transparentes.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
